@@ -6,6 +6,7 @@ import by.training.task3.exception.MatrixIndexOutBoundException;
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
+//todo add private logger
 
 public class MatrixWorker extends Thread {
     private int id;

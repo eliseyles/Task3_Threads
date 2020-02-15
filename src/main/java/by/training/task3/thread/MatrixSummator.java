@@ -7,7 +7,7 @@ import java.util.Formatter;
 import java.util.concurrent.Callable;
 
 public class MatrixSummator implements Callable {
-    static final String TEMPLATE = "Thread %d sum %d";
+    static final String TEMPLATE = "Thread %d sum %d\n";
 
     @Override
     public String[] call() throws Exception {
