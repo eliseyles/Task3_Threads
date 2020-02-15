@@ -1,4 +1,4 @@
-package exception;
+package by.training.task3.exception;
 
 public class MatrixIndexOutBoundException extends Exception {
     public MatrixIndexOutBoundException() {

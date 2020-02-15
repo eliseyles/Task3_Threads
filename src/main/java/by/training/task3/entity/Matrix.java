@@ -1,6 +1,6 @@
-package entity;
+package by.training.task3.entity;
 
-import exception.MatrixIndexOutBoundException;
+import by.training.task3.exception.MatrixIndexOutBoundException;
 
 import java.util.concurrent.locks.ReentrantLock;
 
