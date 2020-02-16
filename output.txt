@@ -1,66 +1,72 @@
-   2   0   0   0   0
-   0   5   0   5   0
-   0   0   3   3   0
-   1   0   0   1   0
-   2   0   0   4   4
+   2   0   0   1   3
+   0   4   5   0   4
+   0   0   5   0   0
+   2   0   0   1   0
+   0   0   0   0   3
 
-Thread 2 sum 7
+Thread 2 sum 10
+Thread 4 sum 17
 Thread 5 sum 15
-Thread 3 sum 9
-Thread 1 sum 15
-Thread 4 sum 14
-   6   0   6   0   0
-   0   8   8   5   0
-   0   7   7   3   0
-   1   9   0   9   0
-   2   0   0  10  10
+Thread 1 sum 5
+Thread 3 sum 13
 
-Thread 6 sum 21
-Thread 8 sum 45
-Thread 7 sum 38
-Thread 9 sum 46
-Thread 10 sum 32
-  14   0   6   0  14
-  15  15   8   5  13
-   0   7  11   3  11
-   1   9   0  12   0
-   2   0   0  12  13
+   9   0   0   1   9
+   0   6   5   0   4
+   0   0  10   0  10
+   2   0   0   7   0
+   0   6   8   7   8
 
-Thread 14 sum 66
-Thread 15 sum 87
-Thread 11 sum 57
-Thread 12 sum 54
-Thread 13 sum 78
-  20  20   6   0  14
-  15  18   8   5  16
-   0   7  17  17  11
-   1  18  19  19   0
-   2   0   0  12  16
+Thread 9 sum 30
+Thread 6 sum 27
+Thread 10 sum 43
+Thread 7 sum 24
+Thread 8 sum 60
 
-Thread 20 sum 98
-Thread 18 sum 125
-Thread 17 sum 102
-Thread 19 sum 110
-Thread 16 sum 87
-  21  21   6   0  14
-  15  25  22  25  16
-   0   7  22  17  11
-   1  18  19  23   0
-   2   0  24  23  24
+  11   0  11   1   9
+  13  13  12   0   4
+   0   0  12   0  10
+   2  15   0  15   0
+   0  14   8   7  14
 
-Thread 21 sum 101
-Thread 25 sum 174
-Thread 22 sum 150
-Thread 23 sum 149
-Thread 24 sum 138
-  30  21  30   0  14
-  15  29  29  25  16
-   0   7  27  17  11
-  28  18  27  28   0
-   2   0  24  26  26
+Thread 11 sum 58
+Thread 13 sum 84
+Thread 12 sum 65
+Thread 15 sum 55
+Thread 14 sum 80
 
-Thread 30 sum 170
-Thread 29 sum 189
-Thread 27 sum 199
-Thread 28 sum 197
-Thread 26 sum 145
+  19   0  11   1   9
+  13  17  17  20   4
+  19  16  16   0  10
+   2  15   0  20  18
+   0  14   8   7  18
+
+Thread 19 sum 93
+Thread 17 sum 133
+Thread 16 sum 113
+Thread 20 sum 103
+Thread 18 sum 106
+
+  25   0  11  25   9
+  22  22  17  20   4
+  23  16  23   0  10
+   2  24   0  24  18
+   0  14  21   7  21
+
+Thread 25 sum 142
+Thread 22 sum 161
+Thread 23 sum 144
+Thread 24 sum 144
+Thread 21 sum 125
+
+  29   0  29  25   9
+  22  30  17  26   4
+  28  16  28   0  10
+   2  24   0  26  18
+   0  30  21  27  27
+
+Thread 29 sum 173
+Thread 30 sum 199
+Thread 28 sum 177
+Thread 26 sum 174
+Thread 27 sum 173
+

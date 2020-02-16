@@ -22,6 +22,7 @@ public class MatrixSummator {
             }
             result.append(String.format(TEMPLATE, matrix.getElementValue(i, i), threadSum));
         }
+        result.append("\n");
         return result.toString();
     }
 }
