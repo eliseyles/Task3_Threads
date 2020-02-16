@@ -1,9 +1,12 @@
-package by.training.task3.thread;
+package by.training.task3.util;
 
 import by.training.task3.entity.Matrix;
 import by.training.task3.exception.MatrixIndexOutBoundException;
+import by.training.task3.thread.MatrixWorker;
+import org.apache.log4j.Logger;
 
 public class MatrixSummator {
+    private static final Logger LOGGER = Logger.getLogger(MatrixSummator.class);
     static final String TEMPLATE = "Thread %d sum %d\n";
 
     public String getFullSum() throws MatrixIndexOutBoundException{
@@ -17,7 +20,7 @@ public class MatrixSummator {
                     threadSum += matrix.getElementValue(i, j);
                     threadSum += matrix.getElementValue(j, i);
                 } catch (MatrixIndexOutBoundException e) {
-//                    todo log
+                    LOGGER.warn(e);
                 }
             }
             result.append(String.format(TEMPLATE, matrix.getElementValue(i, i), threadSum));

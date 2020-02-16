@@ -2,13 +2,16 @@ package by.training.task3.thread;
 
 import by.training.task3.entity.Matrix;
 import by.training.task3.exception.MatrixIndexOutBoundException;
+import by.training.task3.runner.Main;
+import org.apache.log4j.Logger;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
-//todo add private logger
 
 public class MatrixWorker extends Thread {
+    private static final Logger LOGGER = Logger.getLogger(MatrixWorker.class);
+
     private int id;
     private CyclicBarrier barrier;
     private Matrix matrix;
@@ -26,11 +29,11 @@ public class MatrixWorker extends Thread {
             setElementValue(diagonalIndex);
             barrier.await();
         } catch (MatrixIndexOutBoundException e) {
-
+            LOGGER.warn(e);
         } catch (BrokenBarrierException e) {
-
+            LOGGER.warn(e);
         } catch (InterruptedException e) {
-
+            LOGGER.warn(e);
         }
     }
 
@@ -63,7 +66,7 @@ public class MatrixWorker extends Thread {
                 }
             }
         } catch (MatrixIndexOutBoundException e) {
-//            todo log
+            LOGGER.warn(e);
         }
     }
 }

@@ -3,6 +3,8 @@ package by.training.task3.thread;
 import by.training.task3.entity.Matrix;
 import by.training.task3.exception.DataSourceAccessException;
 import by.training.task3.exception.MatrixIndexOutBoundException;
+import by.training.task3.util.MatrixSummator;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,7 +13,7 @@ import java.io.IOException;
 import java.util.concurrent.Semaphore;
 
 public class WriterThread extends Thread {
-
+    private static final Logger LOGGER = Logger.getLogger(WriterThread.class);
     private static final String EMPTY_STR = "";
 
     private Semaphore semaphore;
@@ -33,11 +35,11 @@ public class WriterThread extends Thread {
             writer.append(matrix.toString());
             writer.append(new MatrixSummator().getFullSum());
         } catch (DataSourceAccessException e) {
-//log
+            LOGGER.warn(e);
         } catch (IOException e) {
-//log
+            LOGGER.warn(e);
         } catch (MatrixIndexOutBoundException e) {
-//        todo log
+            LOGGER.warn(e);
         } finally {
             semaphore.release();
         }
@@ -48,6 +50,7 @@ public class WriterThread extends Thread {
             writer.write(EMPTY_STR);
             isClearFile = true;
         } catch (IOException e) {
+            LOGGER.warn(e);
             throw new DataSourceAccessException(e);
         }
     }
