@@ -9,31 +9,26 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
 
 public class Main {
-    private static final String OUTPUT_FILENAME = "output.txt";
-    private static final int Y = 2;
-    private static final int N = 2;
+    private static final int Y = 6;
+    private static final int N = 5;
+    private static final int SEMAPHORE_PERMIT_FOR_ONE_ITERATION = 1;
+    private static final String fileName = "output.txt";
 
-    private static File outputFile = new File(OUTPUT_FILENAME);
-
-    public static void main(String[] args) {
-        Matrix.getInstance().initMatrix(N);
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(N, new WriterThread(outputFile));
-        Semaphore semaphore = new Semaphore(N, true);
+    public static void main(String[] args) throws InterruptedException {
+        Semaphore semaphore = new Semaphore(SEMAPHORE_PERMIT_FOR_ONE_ITERATION);
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(N, new WriterThread(semaphore, fileName));
         Thread currentThread;
-
+        Matrix.getInstance().initMatrix(N);
         try {
             for (int i = 0; i < Y; i++) {
                 semaphore.acquire();
                 for (int j = 0; j < N; j++) {
-                    currentThread = new MatrixWorker(i * N + j, cyclicBarrier);
-                    System.out.printf("thread %s started\n", currentThread.getName());
+                    currentThread = new MatrixWorker(i * N + j + 1, cyclicBarrier);
                     currentThread.start();
-                    semaphore.release();
                 }
             }
         } catch (InterruptedException e) {
-//            log
+//            todo log
         }
-
     }
 }

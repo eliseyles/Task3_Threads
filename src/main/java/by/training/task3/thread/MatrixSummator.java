@@ -1,27 +1,27 @@
 package by.training.task3.thread;
 
 import by.training.task3.entity.Matrix;
+import by.training.task3.exception.MatrixIndexOutBoundException;
 
-import java.text.Format;
-import java.util.Formatter;
-import java.util.concurrent.Callable;
-
-public class MatrixSummator implements Callable {
+public class MatrixSummator {
     static final String TEMPLATE = "Thread %d sum %d\n";
 
-    @Override
-    public String[] call() throws Exception {
+    public String getFullSum() throws MatrixIndexOutBoundException{
         Matrix matrix = Matrix.getInstance();
-        String[] result = new String[matrix.getSize()];
+        StringBuilder result = new StringBuilder();
         int threadSum;
         for (int i = 0; i < matrix.getSize(); i++) {
             threadSum = 0;
             for (int j = 0; j < matrix.getSize(); j++) {
-                threadSum += matrix.getElementValue(i, j);
-                threadSum += matrix.getElementValue(j, i);
+                try {
+                    threadSum += matrix.getElementValue(i, j);
+                    threadSum += matrix.getElementValue(j, i);
+                } catch (MatrixIndexOutBoundException e) {
+//                    todo log
+                }
             }
-            result[i] = String.format(TEMPLATE, i, threadSum);
+            result.append(String.format(TEMPLATE, matrix.getElementValue(i, i), threadSum));
         }
-        return result;
+        return result.toString();
     }
 }

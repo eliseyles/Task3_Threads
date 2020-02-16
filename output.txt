@@ -1,0 +1,66 @@
+   2   0   0   0   0
+   0   5   0   5   0
+   0   0   3   3   0
+   1   0   0   1   0
+   2   0   0   4   4
+
+Thread 2 sum 7
+Thread 5 sum 15
+Thread 3 sum 9
+Thread 1 sum 15
+Thread 4 sum 14
+   6   0   6   0   0
+   0   8   8   5   0
+   0   7   7   3   0
+   1   9   0   9   0
+   2   0   0  10  10
+
+Thread 6 sum 21
+Thread 8 sum 45
+Thread 7 sum 38
+Thread 9 sum 46
+Thread 10 sum 32
+  14   0   6   0  14
+  15  15   8   5  13
+   0   7  11   3  11
+   1   9   0  12   0
+   2   0   0  12  13
+
+Thread 14 sum 66
+Thread 15 sum 87
+Thread 11 sum 57
+Thread 12 sum 54
+Thread 13 sum 78
+  20  20   6   0  14
+  15  18   8   5  16
+   0   7  17  17  11
+   1  18  19  19   0
+   2   0   0  12  16
+
+Thread 20 sum 98
+Thread 18 sum 125
+Thread 17 sum 102
+Thread 19 sum 110
+Thread 16 sum 87
+  21  21   6   0  14
+  15  25  22  25  16
+   0   7  22  17  11
+   1  18  19  23   0
+   2   0  24  23  24
+
+Thread 21 sum 101
+Thread 25 sum 174
+Thread 22 sum 150
+Thread 23 sum 149
+Thread 24 sum 138
+  30  21  30   0  14
+  15  29  29  25  16
+   0   7  27  17  11
+  28  18  27  28   0
+   2   0  24  26  26
+
+Thread 30 sum 170
+Thread 29 sum 189
+Thread 27 sum 199
+Thread 28 sum 197
+Thread 26 sum 145
